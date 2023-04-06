@@ -1,0 +1,141 @@
+@use 'variables';
+
+.hero {
+    padding: 0 44px;
+    margin-bottom: 28px;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1)), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)),url('../../dist/images/background/elliot-red.jpg');
+    background-size: 100vw;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    &__container {
+        padding-top: 48px;
+        display: flex;
+        align-items: flex-end;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 800px;
+        width: 70vw;
+        gap: 24px;
+    }
+
+    h4 {
+        letter-spacing: .02em;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+
+        &__branding {
+
+            img {
+                max-height: 64px;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__season {
+            margin: 12px 0;
+            
+            .btn-gray {
+                background-color: variables.$bgButtonColor;
+                color: variables.$primaryTextColor;
+                width: 128px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
+
+                &:hover {
+                    background-color: variables.$primaryTextColor;
+                    color: black;
+                }
+            }
+
+            a {
+                color: variables.$primaryTextColor;
+                text-decoration: none;
+            }
+        }
+
+        &__info {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &__icons {
+                img {
+                    max-height: 24px;
+                }
+            }
+        }
+
+        &__genre {
+            a {
+                color: variables.$primaryTextColor;
+            }
+        }
+
+        &__included {
+            margin: 24px 0 12px;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 16px;
+                margin-right: 4px;
+            }
+        }
+
+        &__play {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            height: 64px;
+
+            &__button {
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    text-decoration: none;
+                    color: variables.$primaryTextColor;
+                }
+                
+                .bi {
+                    font-size: 64px;
+                    margin-right: 12px;
+                    height: 100%;
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 4px;
+                    
+                    .bord-bot {
+                        border-bottom: 5px solid variables.$bgButtonColor;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            &__icons {
+                .icons__container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+}

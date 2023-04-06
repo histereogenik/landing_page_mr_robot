@@ -1,0 +1,58 @@
+@use 'variables';
+@use 'hero';
+
+@import url('https://fonts.cdnfonts.com/css/amazon-ember?styles=109935,109925');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: variables.$bgColor;
+}
+
+@mixin text($fontSize: 17px, $lineheight: 24px) {
+    font-size: $fontSize;
+    line-height: $lineheight;
+    color: variables.$primaryTextColor;
+}
+
+.text--big {
+    @include text(20px, 23px)
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(15px, 18px);
+}
+
+.text--gray {
+    color: variables.$secondaryTextColor;
+}
+
+.icon--fx {
+    transition: transform 0.1s ease-in-out;
+
+    &-color {
+        font-size: 40px;
+        color: variables.$bgButtonColor;
+        transition: color 0.1s ease-in-out;
+
+        &:hover {
+            color: variables.$primaryTextColor;
+            transition: color 0.1s ease-in-out;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.1s ease-in-out;
+    }
+}
