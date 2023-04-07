@@ -1,5 +1,8 @@
 @use 'variables';
 @use 'hero';
+@use 'watch';
+@use 'footer';
+@use 'header';
 
 @import url('https://fonts.cdnfonts.com/css/amazon-ember?styles=109935,109925');
 
@@ -19,6 +22,7 @@ body {
     font-size: $fontSize;
     line-height: $lineheight;
     color: variables.$primaryTextColor;
+    cursor: default;
 }
 
 .text--big {
@@ -54,5 +58,35 @@ body {
     &:hover {
         transform: scale(1.1);
         transition: transform 0.1s ease-in-out;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.btn-gray {
+    background-color: variables.$bgButtonColor;
+    color: variables.$primaryTextColor;
+    width: 128px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    &:hover {
+        background-color: variables.$primaryTextColor;
+        color: black;
+    }
+}
+
+.included {
+    display: flex;
+    align-items: center;
+
+    img {
+        max-width: 16px;
+        margin-right: 4px;
     }
 }

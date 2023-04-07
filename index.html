@@ -11,7 +11,24 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    <section class="hero">
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <a href="#hero">
+                    <img class="header__logo" src="./dist/images/logos/Prime_Video_Logo_header.png" alt="prime video">
+                </a>
+            </h1>
+            <ul class="header__links text--small m-0">
+                <li class="header__links__item">
+                    <a href="#watch" class="">Watch now</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="">Log in</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero" id="hero">
         <div class="hero__container">
             <h4 class="text--small fw-bolder m-0">GOLDEN GLOBES® 2X winner</h4>
             <div class="hero__list">
@@ -25,6 +42,7 @@
                             <a href="#">
                                 Season 2 - Coming soon
                             </a>
+                        </li>
                     </ul>
                 </div>
                 <p class="text m-0">
@@ -45,7 +63,7 @@
                     <span class="fw-bolder text--gray">·</span>
                     <a href="#">Suspense</a>
                 </div>
-                <div class="hero__list__included">
+                <div class="hero__list__included included">
                     <img src="./dist/images/info/included.png" alt="Included">
                     <span class="text--small fw-bolder">Included with Prime</span>
                 </div>
@@ -58,17 +76,17 @@
                     </div>
                     <div class="hero__list__play__icons">
                         <ul class="icons__container p-0 m-0">
-                            <li class="fs-4 icon--fx">
+                            <li class="icon--fx">
                                 <a href="#">
                                     <i class="bi bi-plus-circle-fill icon--fx-color"></i>
                                 </a>
                             </li>
-                            <li class="fs-4 icon--fx">
+                            <li class="icon--fx">
                                 <a href="#">
                                     <i class="bi bi-arrow-down-circle-fill icon--fx-color"></i>
                                 </a>
                             </li>
-                            <li class="fs-4 icon--fx">
+                            <li class="icon--fx">
                                 <a href="#">
                                     <i class="bi bi-share-fill icon--fx-color"></i>
                                 </a>
@@ -79,9 +97,318 @@
             </div>
         </div>
     </section>
-    <section>
-        <h2>episodes</h2>
+    <section class="watch" id="watch">
+        <nav class="watch__tabs nav nav-pills text--small">
+            <button data-bs-toggle="tab" data-bs-target=".episodes" class="nav-link active">Episodes</button>
+            <button data-bs-toggle="tab" data-bs-target=".details" class="nav-link">Details</button>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane episodes active">
+                <div class="episodes__sort dropdown">
+                    <button data-bs-toggle="dropdown" class="btn btn-gray dropdown-toggle">Sort</button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li class="dropdown-item">
+                            <a href="#">
+                                Episode number
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                Newest episodes
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">
+                                Available to watch
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="episodes__list">
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep01.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E1 - eps1.0_hellofriend.mov</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>June 23, 2015</span>
+                                <span>1 h 5 min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                MR. ROBOT follows Elliot, a cyber-security engineer by day and vigilante hacker by night, who gets recruited by a mysterious underground group to destroy the firm he is paid to protect.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep02.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E2 - eps1.1_ones-and-zer0es.mpeg</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>June 30, 2015</span>
+                                <span>47min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                Elliot is hesitant about fsociety; Elliot is offered a new job; Elliot worries about Shayla's association with Fernando Vera; Ollie is given a CD outside of Allsafe; Mr. Robot makes Elliot talk about his father.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep03.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E3 - eps1.2_d3bug.mkv</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>July 7, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; elliot tries to lead normal life – but pulled back into fsociety. gideon gets suspicious. tyrell plays dirty @ evil corp. I did it 4 the lulz.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep04.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E4 - eps1.3_da3m0ns.mp4</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>July 14, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; fsociety hits the road to initiate world-changing hack. elliots inner demons threaten to derail operation. LIRL
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep05.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E5 - eps1.4_3xpl0its.wmv</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>July 21, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; fsociety arrives @ steel mountain - most secure data facility in USA. elliot needs to get in and get out-wuz he pwned?
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep06.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E6 - eps1.5_br4ve-trave1er.asf</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>July 28, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; to save someone elliot cares abt, hes gotta hack vera-- badass drug-dealer-- out of jail. tyrells "game" gets crazy. angela digs deeper into moms death.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep07.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E7 - eps1.6_v1ew-s0urce.flv</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>August 4, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                Eliot disappeared. Mr. Robot tries to reunite the f-society. The future depends on it. Angela finds herself face to face with an old enemy. Extremely risky.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep08.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E8 - eps1.7_wh1ter0se.m4v</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>August 11, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                All safe is hacked and Elliot is meeting White Rose. Tyrell is interrogated by the police and Elliot remembers who he really is.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep09.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E9 - eps1.8_m1rr0r1ng.qt</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>August 18, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; evil corp hack is threatened when a mystery man from elliots past arrives. wtf.
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="episodes__list__item">
+                        <a class="episodes__list__item__image" href="#">
+                            <img src="./dist/images/episodes/ep10.jpg" alt="mr robot ep 01">
+                        </a>
+                        <div class="episodes__list__item__container">
+                            <div class="episodes__list__item__title">
+                                <h2 class="text--big m-0">S1 E10 - eps1.9_zer0-daY.avi</h2>
+                                <a class="icon--fx" href="#">
+                                    <i class="bi bi-download icon--fx-color fs-2"></i>
+                                </a>
+                            </div>
+                            <div class="episodes__list__item__info text--small text--gray fw-medium">
+                                <span>September 1, 2015</span>
+                                <span>45min</span>
+                                <img src="./dist/images/info/age_16.png" alt="Age 16">
+                            </div>
+                            <p class="text text--gray m-0">
+                                &lt;mr.rob0t&gt; a brave new world. but where are mr. robot and tyrell? & 1 of elliots past hacks comes back to haunt him. TEOTWAWKI?
+                            </p>
+                            <div class="included">
+                                <img src="./dist/images/info/included.png" alt="Included">
+                                <span class="text--small fw-bolder">Included with Prime</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-pane details">
+                <div class="details__container">
+                    <h3 class="text--big fw-bolder">More info</h3>
+                    <span class="text--small fw-bolder">Content advisory</span>
+                    <p class="text--small text--gray">Legal drugs, sexual content, violence, drugs, inappropriate language, illegal drugs</p>
+                    <span class="text--small fw-bolder">Audio languages</span>
+                    <p class="text--small text--gray">English, English [Audio Description], Português, Italiano, 한국어, 日本語, Deutsch, Русский, हिन्दी, Español (España), Español (Latinoamérica), Polski, Čeština, Magyar, Français</p>
+                    <span class="text--small fw-bolder">Subtitles</span>
+                    <p class="text--small text--gray">English [CC], Português (Brasil), العربية, Български, Bosanski, Čeština, Dansk, Deutsch, Ελληνικά, Español (Latinoamérica), Español (España), Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Italiano, 한국어, Македонски, Norsk Bokmål, Nederlands, Polski, Português (Portugal), Română, Русский, Slovenščina, Shqip, Svenska, தமிழ், తెలుగు, Türkçe</p>
+                    <p class="text--small text--gray">By clicking play, you agree to our <a class="text--small" href="#">Terms of Use</a>.</p>
+                </div>
+            </div>
+        </div>
     </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/images/logos/Prime_Video_Logo.png" alt="prime video">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Terms and Privacy Notice</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Send us feedback</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Help</a>
+                </li>
+                <li class="footer__links__item">
+                    <span class="text--small text--gray">© 1996-2023, Amazon.com, Inc. or its affiliates</span>
+                </li>
+        </div>
+    </footer>
 
     <script src="./lib/bootstrap.bundle.min.js"></script>
 </body>

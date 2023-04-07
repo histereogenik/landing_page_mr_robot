@@ -1,0 +1,39 @@
+@use 'variables';
+
+.footer {
+    padding: 24px;
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__logo {
+        height: 32px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            padding: 8px;
+            color: variables.$linkColor;
+            cursor: pointer;
+
+            &:hover {
+                color: lighten(variables.$linkColor, 18%);
+                transition: color 0.2s ease-in-out;
+            }
+        }
+
+        span {
+            padding: 8px;
+        }
+    }
+}

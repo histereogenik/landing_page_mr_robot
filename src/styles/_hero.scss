@@ -4,9 +4,12 @@
     padding: 0 44px;
     margin-bottom: 28px;
     height: 100%;
-    background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1)), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)),url('../../dist/images/background/elliot-red.jpg');
+    background-image: 
+        linear-gradient(to left, transparent, rgba(0,5,13,0.7)),
+        linear-gradient(to bottom, rgba(0,5,13,0.1), rgba(0,5,13,1)),
+        linear-gradient(to bottom, transparent, rgba(0,5,13,0.1)),
+        url('../../dist/images/background/elliot-red.jpg');
     background-size: 100vw;
-    background-position: top;
     background-repeat: no-repeat;
 
     &__container {
@@ -17,12 +20,12 @@
         justify-content: space-between;
         width: 100%;
         max-width: 800px;
-        width: 70vw;
         gap: 24px;
     }
 
     h4 {
         letter-spacing: .02em;
+        position: relative;
     }
 
     &__list {
@@ -33,30 +36,14 @@
         &__branding {
 
             img {
-                max-height: 64px;
+                max-height: 120px;
                 max-width: 100%;
-                height: auto;
+                height: 5vw;
             }
         }
 
         &__season {
             margin: 12px 0;
-            
-            .btn-gray {
-                background-color: variables.$bgButtonColor;
-                color: variables.$primaryTextColor;
-                width: 128px;
-                height: 48px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 16px;
-
-                &:hover {
-                    background-color: variables.$primaryTextColor;
-                    color: black;
-                }
-            }
 
             a {
                 color: variables.$primaryTextColor;
@@ -85,13 +72,6 @@
 
         &__included {
             margin: 24px 0 12px;
-            display: flex;
-            align-items: center;
-
-            img {
-                max-width: 16px;
-                margin-right: 4px;
-            }
         }
 
         &__play {
@@ -99,6 +79,7 @@
             align-items: center;
             gap: 24px;
             height: 64px;
+            margin-bottom: 12px;
 
             &__button {
                 a {
@@ -119,11 +100,16 @@
                     display: flex;
                     flex-direction: column;
                     padding-bottom: 4px;
+                    cursor: pointer;
                     
                     .bord-bot {
                         border-bottom: 5px solid variables.$bgButtonColor;
                         border-radius: 2px;
                     }
+                }
+
+                &:active {
+                    transform: scale(0.9);
                 }
             }
 
