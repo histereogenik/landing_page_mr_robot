@@ -12,12 +12,20 @@
         align-items: center;
         justify-content: center;
         height: 38px;
+
+        @media (max-width: 768px) {
+            height: 48px;
+        }
     }
 
     &__logo {
         height: 24px;
         transition: opacity .5s ease;
         width: 100%;
+
+        @media (max-width: 768px) {
+            height: 18px;
+        }
     }
 
     &__links {

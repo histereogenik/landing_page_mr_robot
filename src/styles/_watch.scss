@@ -7,6 +7,14 @@
 .watch {
     padding: 0 44px 44px;
 
+    @media (max-width: 768px) {
+        padding: 0 24px 80px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        padding: 0 32px 90px;
+    }
+
     &__tabs {
         justify-content: center;
         margin-bottom: 24px;
@@ -37,11 +45,21 @@
 
             button {
                 width: 84px;
+
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
             }
 
             a {
                 color: variables.$primaryTextColor;
                 text-decoration: none;
+            }
+
+            @media (max-width: 1024px) {
+                display: block;
+                width: 100%;
+                padding-bottom: 12px;
             }
         }
 
@@ -55,7 +73,30 @@
                 border: 16px solid transparent;
                 border-radius: 16px;
                 margin-bottom: -16px;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
+                @media (max-width: 1024px) {
+                    background-color: rgba(255,255,255,0.1);
+                    border-color: rgba(255,255,255,0.0);
+                    margin: 12px 0 0;
+                    align-items: center;
+                }
+
+                @media (min-width: 1024px) {
+                    &:hover {
+                        background-color: rgba(255,255,255,0.1);
+                        border-color: rgba(255,255,255,0.0);
+                        transition: all 0.1s ease-in-out;
+                    }
+                }
                 
+                &__container {
+                    width: 100%;
+                }
+
                 &__image {
                     img {
                         max-height: 280px;
@@ -63,6 +104,12 @@
                         width: 25vw;
                         border-radius: 8px;
                         margin-right: 16px;
+
+                        @media (max-width: 768px) {
+                            display: block;
+                            margin: 0 auto 12px;
+                            min-width: 79vw;
+                        }                    
                     }
                 }
 
@@ -70,6 +117,16 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    top: 0;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 12px;
+                        gap: 8px;
+
+                        i {
+                            font-size: 32px !important;
+                        }
+                    }
                 }
 
                 &__info {
@@ -86,12 +143,6 @@
 
                 .included {
                     margin-top: 8px;
-                }
-
-                &:hover {
-                    background-color: rgba(255,255,255,0.1);
-                    border-color: rgba(255,255,255,0.0);
-                    transition: all 0.1s ease-in-out;
                 }
             }
         }

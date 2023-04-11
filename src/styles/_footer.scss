@@ -30,10 +30,20 @@
                 color: lighten(variables.$linkColor, 18%);
                 transition: color 0.2s ease-in-out;
             }
+
+            @media (max-width: 1024px) {
+                padding: 4px;
+                font-size: 13px;
+            }
         }
 
         span {
             padding: 8px;
+
+            @media (max-width: 1024px) {
+                padding: 4px;
+                font-size: 13px;
+            }
         }
     }
 }
